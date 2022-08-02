@@ -67,7 +67,7 @@ version = git_describe.split('-')[0]
 # The full version, including git hash but without # commits
 release = re.sub(r'-.*-', '-', git_describe)
 
-rst_epilog = '.. |version| replace:: %s' % version
+rst_epilog = f'.. |version| replace:: {version}'
 substitutions = [
     ('|version|', version)
 ]
